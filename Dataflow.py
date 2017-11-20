@@ -23,11 +23,11 @@ def my_grep(line, term):
 
 if __name__ == '__main__':
     p = beam.Pipeline(argv=sys.argv);
-    input = 'C:\\Users\\qiyang.chen\\Documents\\SpiDIY\\GCP\\Streaming\\Bookmark.json'
+    input_1 = 'C:\\Users\\qiyang.chen\\Documents\\SpiDIY\\GCP\\Streaming\\Bookmark.json'
     output = 'tmp/output.json'
     searchTerm = 'IN_PROGRESS'
     (p
-        | 'Getfile' >> beam.io.ReadFromText(input) #input file
+        | 'Getfile' >> beam.io.ReadFromText(input_1) #input file
         # | beam. FlatMap (lambda line: count_number(line)) # perform processing
         # | beam. Bucket.by(SlidingWindows.of(24, HOURS)) #streaming window
         # | beam. ParDo.of(new Filter1())
