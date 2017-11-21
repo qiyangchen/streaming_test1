@@ -41,5 +41,6 @@ def run():
     # sizes = lines | 'Length' >> beam.Map(lambda line: len(line))
     p.run()
 
+
 if __name__ == '__main__':    
     run() # run the pipeline
